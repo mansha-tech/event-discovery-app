@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/events";
+const API_URL = "https://retro-events.onrender.com/api/events";
 
 export default function EventDetail() {
   const { id } = useParams();
