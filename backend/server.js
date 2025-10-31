@@ -6,8 +6,22 @@ app.use(cors());
 app.use(express.json());
 
 // In-memory storage
-let events = [];
 let idCounter = 1;
+let events = [{"id":idCounter++,
+  "title":"Hackathon",
+  "description":"a beginners guide to hackathon",
+  "location":"Mumbai",
+  "date":"2025-11-08T08:00",
+  "maxParticipants":"50",
+  "currentParticipants":0},
+   {"id":idCounter++,
+  "title":"Python Workshop",
+  "description":"An Intermediate guide to python",
+  "location":"Mumbai",
+  "date":"2025-11-09T08:00",
+  "maxParticipants":"25",
+  "currentParticipants":0}];
+
 
 // POST /api/events - Create an event
 app.post("/api/events", (req, res) => {
